@@ -10,6 +10,8 @@ int main()
     int populacao1, populacao2;
     float area1, area2;
     float pib_cidade1, pib_cidade2;
+    float densidade1, densidade2;
+    float pib_per_capita1, pib_per_capita2;
     int pontos_turisticos_cidade1, pontos_turisticos_cidade2;
 
     // Leitura dos dados da primeira
@@ -27,6 +29,8 @@ int main()
     scanf("%f", &pib_cidade1);
     printf("Digite o numero de pontos turisticos da primeira cidade: ");
     scanf("%d", &pontos_turisticos_cidade1);
+    densidade1 = (float) populacao1 / area1;
+    pib_per_capita1 = (float) pib_cidade1 / populacao1;
 
     // Leitura dos dados da segunda carta
     printf("Digite o estado da segunda carta (uma letra entre A e H): ");
@@ -43,9 +47,11 @@ int main()
     scanf("%f", &pib_cidade2);
     printf("Digite o numero de pontos turisticos da segunda cidade: ");
     scanf("%d", &pontos_turisticos_cidade2);
+    densidade2 = (float) populacao2 / area2;
+    pib_per_capita2 = (float) pib_cidade2 / populacao2;
 
     // Exibindo os dados da Carta 1
-    printf("\nDados da Carta 1:\n");
+    printf("\n*** Dados da Carta 1 ***\n");
     printf("Estado: %c\n", estado1);
     printf("Código: %c%s\n", estado1, codigo_da_carta1);
     printf("Nome da Cidade: %s\n", cidade1);
@@ -53,9 +59,11 @@ int main()
     printf("Área: %.2f km2\n", area1);
     printf("PIB: %.2f bilhões de Reais\n", pib_cidade1);
     printf("Número de Pontos Turisticos: %d\n", pontos_turisticos_cidade1);
+    printf("Densidade Populacional: %.2f habitantes/km2\n", densidade1);
+    printf("PIB per Capita: %.2f Reais\n", pib_per_capita1);
 
     // Exibindo os dados da Carta 2
-    printf("\nDados da Carta 2:\n");
+    printf("\n*** Dados da Carta 2 ***\n");
     printf("Estado: %c\n", estado2);
     printf("Código: %c%s\n", estado2, codigo_da_carta2);
     printf("Nome da Cidade: %s\n", cidade2);
@@ -63,4 +71,6 @@ int main()
     printf("Área: %.2f km2\n", area2);
     printf("PIB: %.2f bilhões de Reais\n", pib_cidade2);
     printf("Número de Pontos Turisticos: %d\n", pontos_turisticos_cidade2);
+    printf("Densidade Populacional: %.2f habitantes/km2\n", densidade2);
+    printf("PIB per Capita: %.2f Reais\n", pib_per_capita2);
 }
