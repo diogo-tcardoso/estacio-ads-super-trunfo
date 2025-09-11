@@ -73,4 +73,12 @@ int main()
     printf("Número de Pontos Turisticos: %d\n", pontos_turisticos_cidade2);
     printf("Densidade Populacional: %.2f habitantes/km2\n", densidade2);
     printf("PIB per Capita: %.2f Reais\n", pib_per_capita2);
+
+    // Comparando as cartas com base na população
+    printf("\n*** Comparação com base na População ***\n");
+    if ( populacao1 > populacao2 ){
+        printf ("População 1 venceu!!\n");
+    } else {
+        printf ("População 2 venceu!!\n");
+    }
 }
