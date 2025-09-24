@@ -74,11 +74,64 @@ int main()
     printf("Densidade Populacional: %.2f habitantes/km2\n", densidade2);
     printf("PIB per Capita: %.2f Reais\n", pib_per_capita2);
 
-    // Comparando as cartas com base na população
-    printf("\n*** Comparação com base na População ***\n");
-    if ( populacao1 > populacao2 ){
-        printf ("População 1 venceu!!\n");
-    } else {
-        printf ("População 2 venceu!!\n");
+    // Menu de escolha de atributo para comparação
+    int escolha_atributo;
+    printf ("*** Escolha o Atributo para Comparar ***\n");
+    printf ("1 - População\n");
+    printf ("2 - Área\n");
+    printf ("3 - PIB\n");
+    printf ("4 - Densidade Populacional\n");
+    printf ("5 - PIB per Capita\n");
+    printf ("6 - Pontos Turisticos\n");
+    printf ("Escolha: ");
+    scanf ("%d", &escolha_atributo);
+
+    //switch para comparar os atributos escolhidos
+    switch (escolha_atributo) {
+        case 1:
+            if ( populacao1 > populacao2 ){
+                printf ("População 1 venceu!!\n");
+            } else {
+                printf ("População 2 venceu!!\n");
+            }
+            break;
+        case 2:
+            if ( area1 > area2 ){
+                printf ("Área 1 venceu!!\n");
+            } else {
+                printf ("Área 2 venceu!!\n");
+            }
+            break;
+        case 3:
+            if ( pib_cidade1 > pib_cidade2 ){
+                printf ("PIB 1 venceu!!\n");
+            } else {
+                printf ("PIB 2 venceu!!\n");
+            }
+            break;
+        case 4:
+            if ( densidade1 > densidade2 ){
+                printf ("Densidade Populacional 2 venceu!!\n");
+            } else {
+                printf ("Densidade Populacional 1 venceu!!\n");
+            }
+            break;
+        case 5:
+            if ( pib_per_capita1 > pib_per_capita2 ){
+                printf ("PIB per Capita 1 venceu!!\n");
+            } else {
+                printf ("PIB per Capita 2 venceu!!\n");
+            }
+            break;
+        case 6:
+            if ( pontos_turisticos_cidade1 > pontos_turisticos_cidade2 ){
+                printf ("Pontos Turisticos 1 venceu!!\n");
+            } else {
+                printf ("Pontos Turisticos 2 venceu!!\n");
+            }
+            break;
+        default:
+            printf("Escolha inválida! \n");
+            break;
     }
 }
